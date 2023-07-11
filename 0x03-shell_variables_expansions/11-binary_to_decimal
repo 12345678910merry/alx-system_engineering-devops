@@ -1,16 +1,2 @@
 #!/bin/bash
-#!/bin/bash
-
-# Check if the BINARY environment variable is set
-if [ -z "$BINARY" ]; then
-  echo "BINARY environment variable is not set."
-  exit 1
-fi
-
-# Convert the number from base 2 to base 10
-decimal=$(echo "ibase=2; $BINARY" | bc)
-
-# Display the number in base 10
-echo "Base 10 equivalent of $BINARY is: $decimal"
-
-
+echo "ibase=2; $BINARY" | bc
